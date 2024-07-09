@@ -25,6 +25,8 @@ let timeList = setTimeout(function () {
     let timePrompt = setTimeout(function () {
         // creo array vuoto per contenere i numeri inseriti dall'utente
         let userNumberArray = [];
+        // creo array contenente i numeri presenti sia nell'array randomico sia in quello con i numeri dell'utente
+        let comparedNUmbers = [];
         for (let i = 0; i < 5; i++) {
             // permetto all'utente di inserire i numeri
             userNumberArray[i] = prompt(`Inserisci il ${i + 1}° numero`);
@@ -32,7 +34,7 @@ let timeList = setTimeout(function () {
         for (let i = 0; i < userNumberArray.length; i++) {
             // confronto i numeri inseriti dall'utente con i numeri random
             if (randomNumbersArray.includes(userNumberArray[i])) {
-                
+                comparedNUmbers.push(userNumberArray[i]);
             }
         }
     }, 1000)
