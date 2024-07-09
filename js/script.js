@@ -3,7 +3,7 @@ let randomNumbersArray = [];
 // ciclo l'array generando 5 numeri casuali
 for (let i = 0; i < 5; i++) {
     randomNumbersArray[i] = Math.floor(Math.random() * 100 + 1);
-    console.log(randomNumbersArray[i]);
+    // console.log(randomNumbersArray[i]);
     // richiamo l'elemento html 
     let ul = document.getElementById('random-numbers');
     // creo list item contenente i singoli numeri
@@ -13,3 +13,6 @@ for (let i = 0; i < 5; i++) {
     // appendo i list item all'ul
     ul.appendChild(li);
 }
+let time = setInterval(function () {
+    console.log('ciao');
+}, 3000);
