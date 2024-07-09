@@ -14,11 +14,18 @@ for (let i = 0; i < 5; i++) {
     ul.appendChild(li);
 }
 // creo intervallo di tempo in cui i numeri sono visibili
-let time = setInterval(function () {
+let timeList = setTimeout(function () {
     // riprendo la lista html
     let ul = document.getElementById('random-numbers');
     // creo istruzione condizinale per cui la lista scompare dopo il tempo impostato dalla funzione
     if (ul != null) {
         ul.remove();
     } 
+    // terminato il tempo in cui vengono mostrati i numeri, avvio la funzione per far inserire all'utente i 5 numeri
+    let timePrompt = setTimeout(function () {
+        // permetto all'utente di inserire i numeri
+        for (let i = 0; i < 5; i++) {
+            useNumber = prompt(`Inserisci il ${i + 1}° numero`);
+        }
+    }, 1000)
 }, 3000);
