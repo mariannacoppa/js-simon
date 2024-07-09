@@ -24,8 +24,13 @@ let timeList = setTimeout(function () {
     // terminato il tempo in cui vengono mostrati i numeri, avvio la funzione per far inserire all'utente i 5 numeri
     let timePrompt = setTimeout(function () {
         // permetto all'utente di inserire i numeri
+        let userNumberArray = [];
         for (let i = 0; i < 5; i++) {
-            useNumber = prompt(`Inserisci il ${i + 1}° numero`);
+            userNumberArray[i] = prompt(`Inserisci il ${i + 1}° numero`);
+            // confronto i numeri inseriti dall'utente con i numeri random
+            // if (randomNumbersArray.includes(useNumber)) {
+
+            // }
         }
     }, 1000)
 }, 3000);
