@@ -13,6 +13,12 @@ for (let i = 0; i < 5; i++) {
     // appendo i list item all'ul
     ul.appendChild(li);
 }
+// creo intervallo di tempo in cui i numeri sono visibili
 let time = setInterval(function () {
-    console.log('ciao');
+    // riprendo la lista html
+    let ul = document.getElementById('random-numbers');
+    // creo istruzione condizinale per cui la lista scompare dopo il tempo impostato dalla funzione
+    if (ul != null) {
+        ul.remove();
+    } 
 }, 3000);
