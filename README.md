@@ -4,3 +4,10 @@ Descrizione: Visualizzare in pagina 5 numeri casuali. Da lì parte un timer di 3
 Numero push minimi: 7
 
 Pseudocodice
+
+Creo nell'html un elemento che conterrà 5 numeri casuali
+creo un array vuoto che conterrà i 5 numeri inseriti dall'utente
+permetto all'utente di inserire 5 numeri, tramite prompt
+imposto una funzione che genera 5 numeri casuali
+SE il numero inserito dall'utente è compreso tra i 5 numeri generati casualmente, lo inserisco nell'array vuoto
+altrimenti compare il messaggio "ritenta"
