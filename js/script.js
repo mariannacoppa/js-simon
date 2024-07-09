@@ -20,7 +20,7 @@ let timeList = setTimeout(function () {
     // creo istruzione condizinale per cui la lista scompare dopo il tempo impostato dalla funzione
     if (ul != null) {
         ul.remove();
-    } 
+    }
     // terminato il tempo in cui vengono mostrati i numeri, avvio la funzione per far inserire all'utente i 5 numeri
     let timePrompt = setTimeout(function () {
         // creo array vuoto per contenere i numeri inseriti dall'utente
@@ -29,13 +29,17 @@ let timeList = setTimeout(function () {
         let comparedNUmbers = [];
         for (let i = 0; i < 5; i++) {
             // permetto all'utente di inserire i numeri
-            userNumberArray[i] = prompt(`Inserisci il ${i + 1}° numero`);
+            userNumberArray[i] = parseInt(prompt(`Inserisci il ${i + 1}° numero`));
         }
         for (let i = 0; i < userNumberArray.length; i++) {
             // confronto i numeri inseriti dall'utente con i numeri random
-            if (randomNumbersArray.includes(userNumberArray[i])) {
+            if (randomNumbersArray.indexOf(userNumberArray[i]) != -1) {
                 comparedNUmbers.push(userNumberArray[i]);
             }
         }
+        console.log(randomNumbersArray);
+        console.log(userNumberArray);
+        console.log(comparedNUmbers);
+        alert(`Hai indovinato ${comparedNUmbers.length} numeri: ${comparedNUmbers}`);
     }, 1000)
 }, 3000);
